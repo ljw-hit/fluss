@@ -25,4 +25,4 @@ mvn clean package -DskipTests
 
 # copy fluss to output
 mkdir -p output
-cp -r build-target/ output/
+cp -r build-target/* output/
