@@ -41,6 +41,7 @@
             <groupId>com.alibaba.fluss</groupId>
             <artifactId>fluss-fs-hadoop-shaded</artifactId>
             <version>${project.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
@@ -48,6 +49,7 @@
             <artifactId>hadoop-hdfs</artifactId>
             <!-- to keep same to the haddop version of fluss-fs-hadoop-shaded -->
             <version>${fs.hadoopshaded.version}</version>
+            <scope>provided</scope>
             <exclusions>
                 <exclusion>
                     <groupId>ch.qos.reload4j</groupId>
@@ -64,6 +66,7 @@
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-hdfs-client</artifactId>
             <version>${fs.hadoopshaded.version}</version>
+            <scope>provided</scope>
             <exclusions>
                 <exclusion>
                     <groupId>ch.qos.reload4j</groupId>
@@ -187,12 +190,12 @@
                                     </excludes>
                                 </filter>
                             </filters>
-                            <relocations>
-                                <relocation>
-                                    <pattern>org.apache.commons</pattern>
-                                    <shadedPattern>com.alibaba.fluss.shaded.org.apache.commons</shadedPattern>
-                                </relocation>
-                            </relocations>
+<!--                            <relocations>-->
+<!--                                <relocation>-->
+<!--                                    <pattern>org.apache.commons</pattern>-->
+<!--                                    <shadedPattern>com.alibaba.fluss.shaded.org.apache.commons</shadedPattern>-->
+<!--                                </relocation>-->
+<!--                            </relocations>-->
                         </configuration>
                     </execution>
                 </executions>
