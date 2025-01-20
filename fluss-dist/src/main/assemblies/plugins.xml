@@ -35,19 +35,19 @@
             <fileMode>0644</fileMode>
         </file>
 
-        <file>
-            <source>../fluss-filesystems/fluss-fs-oss/target/fluss-fs-oss-${project.version}.jar</source>
-            <outputDirectory>plugins/oss/</outputDirectory>
-            <destName>fluss-fs-oss-${project.version}.jar</destName>
-            <fileMode>0644</fileMode>
-        </file>
+<!--        <file>-->
+<!--            <source>../fluss-filesystems/fluss-fs-oss/target/fluss-fs-oss-${project.version}.jar</source>-->
+<!--            <outputDirectory>plugins/oss/</outputDirectory>-->
+<!--            <destName>fluss-fs-oss-${project.version}.jar</destName>-->
+<!--            <fileMode>0644</fileMode>-->
+<!--        </file>-->
 
-        <file>
-            <source>../fluss-filesystems/fluss-fs-s3/target/fluss-fs-s3-${project.version}.jar</source>
-            <outputDirectory>plugins/s3/</outputDirectory>
-            <destName>fluss-fs-s3-${project.version}.jar</destName>
-            <fileMode>0644</fileMode>
-        </file>
+<!--        <file>-->
+<!--            <source>../fluss-filesystems/fluss-fs-s3/target/fluss-fs-s3-${project.version}.jar</source>-->
+<!--            <outputDirectory>plugins/s3/</outputDirectory>-->
+<!--            <destName>fluss-fs-s3-${project.version}.jar</destName>-->
+<!--            <fileMode>0644</fileMode>-->
+<!--        </file>-->
 
         <!-- metrics -->
         <file>
