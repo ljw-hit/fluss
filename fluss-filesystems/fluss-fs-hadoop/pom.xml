@@ -37,20 +37,56 @@
             <scope>provided</scope>
         </dependency>
 
-        <dependency>
-            <groupId>com.alibaba.fluss</groupId>
-            <artifactId>fluss-fs-hadoop-shaded</artifactId>
-            <version>${project.version}</version>
-            <scope>provided</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba.fluss</groupId>-->
+<!--            <artifactId>fluss-fs-hadoop-shaded</artifactId>-->
+<!--            <version>${project.version}</version>-->
+<!--            <scope>provided</scope>-->
+<!--        </dependency>-->
 
+<!--        <dependency>-->
+<!--            <groupId>org.apache.hadoop</groupId>-->
+<!--            <artifactId>hadoop-hdfs</artifactId>-->
+<!--            &lt;!&ndash; to keep same to the haddop version of fluss-fs-hadoop-shaded &ndash;&gt;-->
+<!--            <version>${fs.hadoopshaded.version}</version>-->
+<!--            <scope>provided</scope>-->
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>ch.qos.reload4j</groupId>-->
+<!--                    <artifactId>reload4j</artifactId>-->
+<!--                </exclusion>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.slf4j</groupId>-->
+<!--                    <artifactId>slf4j-reload4j</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>org.apache.hadoop</groupId>-->
+<!--            <artifactId>hadoop-hdfs-client</artifactId>-->
+<!--            <version>${fs.hadoopshaded.version}</version>-->
+<!--            <scope>provided</scope>-->
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>ch.qos.reload4j</groupId>-->
+<!--                    <artifactId>reload4j</artifactId>-->
+<!--                </exclusion>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.slf4j</groupId>-->
+<!--                    <artifactId>slf4j-reload4j</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.apache.hadoop</groupId>
-            <artifactId>hadoop-hdfs</artifactId>
-            <!-- to keep same to the haddop version of fluss-fs-hadoop-shaded -->
-            <version>${fs.hadoopshaded.version}</version>
-            <scope>provided</scope>
+            <artifactId>hadoop-client</artifactId>
+            <version>2.6.0-cdh5.4.4-bd381</version>
             <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
                 <exclusion>
                     <groupId>ch.qos.reload4j</groupId>
                     <artifactId>reload4j</artifactId>
@@ -59,22 +95,9 @@
                     <groupId>org.slf4j</groupId>
                     <artifactId>slf4j-reload4j</artifactId>
                 </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.hadoop</groupId>
-            <artifactId>hadoop-hdfs-client</artifactId>
-            <version>${fs.hadoopshaded.version}</version>
-            <scope>provided</scope>
-            <exclusions>
                 <exclusion>
-                    <groupId>ch.qos.reload4j</groupId>
-                    <artifactId>reload4j</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-reload4j</artifactId>
+                    <groupId>log4j</groupId>
+                    <artifactId>log4j</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -190,12 +213,12 @@
                                     </excludes>
                                 </filter>
                             </filters>
-<!--                            <relocations>-->
-<!--                                <relocation>-->
-<!--                                    <pattern>org.apache.commons</pattern>-->
-<!--                                    <shadedPattern>com.alibaba.fluss.shaded.org.apache.commons</shadedPattern>-->
-<!--                                </relocation>-->
-<!--                            </relocations>-->
+                            <relocations>
+                                <relocation>
+                                    <pattern>org.apache.commons</pattern>
+                                    <shadedPattern>com.alibaba.fluss.shaded.org.apache.commons</shadedPattern>
+                                </relocation>
+                            </relocations>
                         </configuration>
                     </execution>
                 </executions>
