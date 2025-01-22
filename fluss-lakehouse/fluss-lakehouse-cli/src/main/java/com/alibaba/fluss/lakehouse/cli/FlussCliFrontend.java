@@ -45,7 +45,7 @@ public class FlussCliFrontend extends CliFrontend {
     }
 
     @Override
-    protected void executeProgram(final Configuration configuration, final PackagedProgram program)
+    public void executeProgram(final Configuration configuration, final PackagedProgram program)
             throws ProgramInvocationException {
         List<String> originPipelineJars = originConfiguration.get(PipelineOptions.JARS);
         if (originPipelineJars != null) {
