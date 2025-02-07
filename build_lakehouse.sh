@@ -28,3 +28,6 @@ mvn clean package -DskipTests
 mkdir -p output
 cp -r build-target/opt/fluss-lakehouse-paimon-0.5-SNAPSHOT.jar output/
 cp -r build-target/conf/server.yaml output/
+
+mkdir -p output/runtime_files
+cp -r build-target/plugins/hadoop/fluss-fs-hadoop-0.5-SNAPSHOT.jar output/runtime_files/
