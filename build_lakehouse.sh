@@ -26,8 +26,8 @@ mvn clean package -DskipTests
 # copy fluss-lakehouse-paimon to output
 # copy conf/server.yaml to output
 mkdir -p output
-cp -r build-target/opt/fluss-lakehouse-paimon-0.5-SNAPSHOT.jar output/
+cp -r build-target/opt/fluss-lakehouse-paimon-0.6-SNAPSHOT.jar output/
 cp -r build-target/conf/server.yaml output/
 
 mkdir -p output/runtime_files
-cp -r build-target/plugins/hadoop/fluss-fs-hadoop-0.5-SNAPSHOT.jar output/runtime_files/
+cp -r build-target/plugins/hdfs/fluss-fs-hadoop-0.6-SNAPSHOT.jar output/runtime_files/
