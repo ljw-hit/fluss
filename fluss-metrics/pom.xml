@@ -32,6 +32,7 @@
     <modules>
         <module>fluss-metrics-prometheus</module>
         <module>fluss-metrics-jmx</module>
+        <module>fluss-metrics-bytetsd</module>
     </modules>
 
     <!-- override these root dependencies as 'provided', so they don't end up

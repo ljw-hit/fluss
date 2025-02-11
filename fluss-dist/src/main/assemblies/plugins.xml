@@ -63,6 +63,13 @@
             <destName>fluss-metrics-jmx-${project.version}.jar</destName>
             <fileMode>0644</fileMode>
         </file>
+
+        <file>
+            <source>../fluss-metrics/fluss-metrics-bytetsd/target/fluss-metrics-bytetsd-${project.version}.jar</source>
+            <outputDirectory>plugins/bytetsd/</outputDirectory>
+            <destName>fluss-metrics-bytetsd-${project.version}.jar</destName>
+            <fileMode>0644</fileMode>
+        </file>
     </files>
 
 </assembly>
