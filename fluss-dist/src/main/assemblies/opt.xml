@@ -41,5 +41,13 @@
             <destName>fluss-lakehouse-cli-${project.version}.jar</destName>
             <fileMode>0644</fileMode>
         </file>
+
+        <!-- fluss-connector jars -->
+        <file>
+            <source>../fluss-connectors/fluss-connector-flink/target/fluss-connector-flink-${project.version}.jar</source>
+            <outputDirectory>opt</outputDirectory>
+            <destName>fluss-connector-flink-${project.version}.jar</destName>
+            <fileMode>0644</fileMode>
+        </file>
     </files>
 </assembly>
