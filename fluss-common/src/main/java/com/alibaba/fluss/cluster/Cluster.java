@@ -256,7 +256,7 @@ public final class Cluster {
 
     public TableInfo getTableOrElseThrow(TablePath tablePath) {
         return getTable(tablePath)
-                .orElseThrow(() -> new IllegalArgumentException("table not found in cluster"));
+                .orElseThrow(() -> new IllegalArgumentException(String.format("table: %s.%s not found in cluster", tablePath.getDatabaseName(), tablePath.getTableName())));
     }
 
     public TableBucket getTableBucket(PhysicalTablePath physicalTablePath, int bucketId) {
