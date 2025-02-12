@@ -244,8 +244,7 @@ public final class Cluster {
                         () ->
                                 new IllegalArgumentException(
                                         String.format(
-                                                "table: %s not found in cluster",
-                                                tablePath.toString())));
+                                                "table: %s not found in cluster", tablePath)));
     }
 
     public TableBucket getTableBucket(PhysicalTablePath physicalTablePath, int bucketId) {
